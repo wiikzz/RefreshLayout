@@ -114,6 +114,14 @@ public class RefreshLayout extends ViewGroup {
             return;
         }
 
+        // reset some attrs
+        int width = r - l;
+        int height = b - t;
+        l = 0;
+        t = 0;
+        r = width;
+        b = height;
+
         if(mHeaderHandler != null && mHeaderView != null) {
             switch (mDrawType) {
                 case OVERLAP:
